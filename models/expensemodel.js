@@ -23,6 +23,10 @@ const ExpenseSchema = new mongoose.Schema({
         type: Boolean,
         required: true
     },
+    userId: {
+        type: String,
+        required: true
+    }
 }, { collection: 'expense' })
 
 //export this Schema

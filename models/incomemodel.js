@@ -23,6 +23,10 @@ const IncomeSchema = new mongoose.Schema({
         type: Boolean,
         required: true
     },
+    userId: {
+        type: String,
+        required: true
+    }
 }, { collection: 'income' })
 
 //export this Schema

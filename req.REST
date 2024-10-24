@@ -42,6 +42,28 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzdmY
 
 ### Delete an Item ↑↑
 
+################################ Montly Sheets ##########################################
+
+POST http://localhost:5000/api/MonthlySheet
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFhMzg1ZjhmN2EyY2Y4NWM5ZDk1OWQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTc3MTY0MSwiZXhwIjoxNzI5ODU4MDQxfQ.KTywLxQTav5DC75FXc5G9op-x7DbR19bITvoqjCx4_k
+
+{
+    "month_name": "April",
+    "starting_balance": 6500
+}
+
+## Create Monthly Sheet
+
+GET http://localhost:5000/api/MonthlySheet
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFhMzg1ZjhmN2EyY2Y4NWM5ZDk1OWQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTc3MTY0MSwiZXhwIjoxNzI5ODU4MDQxfQ.KTywLxQTav5DC75FXc5G9op-x7DbR19bITvoqjCx4_k
+
+
+
+GET http://localhost:5000/api/MonthlySheet
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFhMzg1ZjhmN2EyY2Y4NWM5ZDk1OWQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTc3MTY0MSwiZXhwIjoxNzI5ODU4MDQxfQ.KTywLxQTav5DC75FXc5G9op-x7DbR19bITvoqjCx4_k
 
 ################################ AUTH ##########################################
 
@@ -105,6 +127,6 @@ POST http://localhost:5000/api/login
 content-Type: application/json
 
 {
-    "email": "raiyan14@gmail.com",
+    "email": "raiyan15@gmail.com",
     "password": "1@qQasdf"
 }

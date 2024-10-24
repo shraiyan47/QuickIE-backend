@@ -1,40 +1,43 @@
 const router = require('express').Router();
 //import todo model 
-const MonthlySheetModel = require('../models/monthlysheetmodel');
+const MonthlySheetModel = require('../models/MonthlySheetmodel');
 const TokenChecker = require('../TokenChecker');
 
 const ts = Date.now();
 
 //create first route --add Todo Item to database
-router.post('/api/monthlysheet', async (req, res) => {
+router.post('/api/MonthlySheet', async (req, res) => {
     try {
-        // const theToken = req.headers.authorization;
-        // if (!!theToken) {
-        //     const tokenResult = TokenChecker.TokenChecker(theToken);
-        //     console.log("Return Token ", tokenResult);
+        const theToken = req.headers.authorization;
+        if (!!theToken) {
+            const tokenResult = TokenChecker.TokenChecker(theToken);
+            console.log("Return Token ", tokenResult);
 
-        //     if (tokenResult) {
+            if (tokenResult) {
 
                 const newItem = new MonthlySheetModel({
                     month_name: req.body.month_name,
                     starting_balance: req.body.starting_balance,
                     isActive: true,
-                    date: ts
+                    date: ts,
+                    userId: tokenResult.userId
                 })
                 //save this item in database
                 const saveItem = await newItem.save()
-
+                console.log("Done 1")
                 const allMonthlySheet = await MonthlySheetModel.find({"userId":tokenResult.userId});
+                console.log("Done 2")
+                
                 res.status(200).json({ saveItem, allMonthlySheet });
                 // res.status(200).json(saveItem);
-        //     }
-        //     else {
-        //         res.status(401).json({ "ErrorMsg": "Unauthorized User" })
-        //     }
-        // }
-        // else {
-        //     res.status(406).json({ "ErrorMsg": "Undifined Auth Token" })
-        // }
+            }
+            else {
+                res.status(401).json({ "ErrorMsg": "Unauthorized User" })
+            }
+        }
+        else {
+            res.status(406).json({ "ErrorMsg": "Undifined Auth Token" })
+        }
 
 
     } catch (err) {
@@ -43,31 +46,31 @@ router.post('/api/monthlysheet', async (req, res) => {
 })
 
 // // get All Item from database
-// router.get('/api/items', async (req, res) => {
-//     try {
-//         const theToken = req.headers.authorization;
-//         if (!!theToken) {
-//             const tokenResult = TokenChecker.TokenChecker(theToken);
-//             console.log("Return Token ", tokenResult);
+router.get('/api/MonthlySheet', async (req, res) => {
+    try {
+        const theToken = req.headers.authorization;
+        if (!!theToken) {
+            const tokenResult = TokenChecker.TokenChecker(theToken);
+            console.log("Return Token ", tokenResult);
 
-//             if (tokenResult) {
+            if (tokenResult) {
 
-//                 const allTodoItems = await todoItemsModel.find({"userId":tokenResult.userId});
-//                 res.status(200).json(allTodoItems);
+                const allMonthlySheet = await MonthlySheetModel.find({"userId":tokenResult.userId});
+                res.status(200).json(allMonthlySheet);
 
-//             }
-//             else {
-//                 res.status(401).json({ "ErrorMsg": "Unauthorized User" })
-//             }
-//         }
-//         else {
-//             res.status(406).json({ "ErrorMsg": "Undifined Auth Token" })
-//         }
+            }
+            else {
+                res.status(401).json({ "ErrorMsg": "Unauthorized User" })
+            }
+        }
+        else {
+            res.status(406).json({ "ErrorMsg": "Undifined Auth Token" })
+        }
 
-//     } catch (err) {
-//         res.json(err);
-//     }
-// })
+    } catch (err) {
+        res.json(err);
+    }
+})
 
 // //Get by id route 
 // router.get('/api/items/:id', async (req, res) => {
@@ -78,7 +81,7 @@ router.post('/api/monthlysheet', async (req, res) => {
 //             console.log("Return Token ", tokenResult);
 
 //             if (tokenResult) {
-//                 const theTodo = await todoItemsModel.findById(req.params.id, {});
+//                 const theTodo = await MonthlySheetModel.findById(req.params.id, {});
 //                 res.status(200).json(theTodo);
 //             }
 //             else {
@@ -108,10 +111,10 @@ router.post('/api/monthlysheet', async (req, res) => {
 //             if (tokenResult) {
 
 //                 //find the item by its id and update it
-//                 const updateItem = await todoItemsModel.findByIdAndUpdate(req.params.id, { $set: req.body });
+//                 const updateItem = await MonthlySheetModel.findByIdAndUpdate(req.params.id, { $set: req.body });
 //                 // res.status(200).json(updateItem);
-//                 const allTodoItems = await todoItemsModel.find({"userId":tokenResult.userId});
-//                 res.status(200).json({ updateItem, allTodoItems });
+//                 const allMonthlySheet = await MonthlySheetModel.find({"userId":tokenResult.userId});
+//                 res.status(200).json({ updateItem, allMonthlySheet });
 
 //             }
 //             else {
@@ -137,7 +140,7 @@ router.post('/api/monthlysheet', async (req, res) => {
 
 //             if (tokenResult) {
 //                 //find the item by its id and delete it
-//                 const deleteItem = await todoItemsModel.findByIdAndDelete(req.params.id);
+//                 const deleteItem = await MonthlySheetModel.findByIdAndDelete(req.params.id);
 //                 res.status(200).json({ 'msg': 'Item Deleted' });
 
 //             }
