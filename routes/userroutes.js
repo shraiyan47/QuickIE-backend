@@ -265,7 +265,7 @@ router.post("/api/user/registration/admin", async (req, res) => {
           chabbi: vungChabi,
           date: ts,
           role: "admin",
-          acl: ["todo", "notes", "daily-report", "crm", "inventory"],
+          acl: ["todo", "notes", "daily-report", "crm", "inventory", "quickie"],
         });
         //save this item in database
         const saveItem = await newItem.save();

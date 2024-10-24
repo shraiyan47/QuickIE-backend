@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5000;
 // import routes
 // const DailyReport = require('./routes/dailyreportroutes');
 const todoItemRoute = require('./routes/todoroutes');
-// const noteRoute = require('./routes/notesroutes');
+const monthlySheetRoute = require('./routes/monthlysheetroutes');
 const userRoute = require('./routes/userroutes');
 mongoose.set("strictQuery", false);
 
@@ -25,7 +25,7 @@ mongoose.connect(process.env.DB_CONNECT)
 
 // app.use('/', DailyReport);
 app.use('/', todoItemRoute);
-// app.use('/', noteRoute);
+app.use('/', monthlySheetRoute);
 app.use('/', userRoute);
 
 //add port and connect to server

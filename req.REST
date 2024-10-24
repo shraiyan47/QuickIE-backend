@@ -43,123 +43,6 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzdmY
 ### Delete an Item ↑↑
 
 
-################################# Daily Report #############################################
-POST http://localhost:5000/api/dailyreport 
-content-Type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzgwZmQ4ZDBmYTYyYTEyNzg3ODJlYzMiLCJlbWFpbCI6InJhaXlhbjA4QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4NzgxMzkzOSwiZXhwIjoxNjg3ODE3NTM5fQ.VJcGKEOutDrhY4Juc4_9Z3bS7PEeeYzc02wrkfekb1I
-
-{
-    "quran": true,
-    "hadith": 3,
-    "studypage": 4, 
-    "prayer": 3, 
-    "dawattime": 2, 
-    "membermeet": 1, 
-    "bookdist": 2, 
-    "selfcriticism": true, 
-    "reportDate": "2023-06-02",
-    "complete": true, 
-    "todaysReport": false 
-}
-
-
-### Create a daily Report ↑↑
-
-GET http://localhost:5000/api/dailyreports?startofdate=2023-06-01&endofdate=2023-06-09
-content-Type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzgwZmQ4ZDBmYTYyYTEyNzg3ODJlYzMiLCJlbWFpbCI6InJhaXlhbjA4QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4NzgxMzkzOSwiZXhwIjoxNjg3ODE3NTM5fQ.VJcGKEOutDrhY4Juc4_9Z3bS7PEeeYzc02wrkfekb1I
-
-
-### Get daily report between two dates ↑↑
-
-GET http://localhost:5000/api/dailyreport/6499ff5571f1d7ef3662ef0c
-content-Type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzgwZmQ4ZDBmYTYyYTEyNzg3ODJlYzMiLCJlbWFpbCI6InJhaXlhbjA4QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4NzgxMzkzOSwiZXhwIjoxNjg3ODE3NTM5fQ.VJcGKEOutDrhY4Juc4_9Z3bS7PEeeYzc02wrkfekb1I
-
-
-### Get An Item ↑↑
-
-PUT http://localhost:5000/api/dailyreport/6499ff5571f1d7ef3662ef0c
-content-Type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzgwZmQ4ZDBmYTYyYTEyNzg3ODJlYzMiLCJlbWFpbCI6InJhaXlhbjA4QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4NzgxMzkzOSwiZXhwIjoxNjg3ODE3NTM5fQ.VJcGKEOutDrhY4Juc4_9Z3bS7PEeeYzc02wrkfekb1I
-
-{
-    "quran": true,
-    "hadith": 5,
-    "studypage": 5, 
-    "prayer": 5, 
-    "dawattime": 5, 
-    "membermeet": 5, 
-    "bookdist": 5, 
-    "selfcriticism": true, 
-    "reportDate": "2023-06-02",
-    "complete": true, 
-    "todaysReport": false 
-}
-
- 
-### Update Daily Report ↑↑
-
-DELETE  http://localhost:5000/api/dailyreport/6499ff5571f1d7ef3662ef0c
-content-Type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzgwZmQ4ZDBmYTYyYTEyNzg3ODJlYzMiLCJlbWFpbCI6InJhaXlhbjA4QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4NzgxMzkzOSwiZXhwIjoxNjg3ODE3NTM5fQ.VJcGKEOutDrhY4Juc4_9Z3bS7PEeeYzc02wrkfekb1I
-
-
-### Delete an Item ↑↑
-
-#################################### Notes #############################################
-
-POST http://localhost:5000/api/note 
-content-Type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzhhZGI2N2Y4MmQxMDkzODk1NzE1MDQiLCJlbWFpbCI6InNocmFpeWFuMjFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjkxODM2MzAzLCJleHAiOjE2OTE5MjI3MDN9.ZecOgGy6PnQj8CPWSuJ5l_ZP2XJRR8WQfp3I-cyfD7Q
-
-{
-    "title": "Test Public Note 7",
-    "details": "Making my Public note for MERN Stack Application", 
-    "privacy": "public"
-}
-
-### Create Note ↑
-
-GET http://localhost:5000/api/notes
-content-Type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzhhZGI2N2Y4MmQxMDkzODk1NzE1MDQiLCJlbWFpbCI6InNocmFpeWFuMjFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjkxODI0NjI3LCJleHAiOjE2OTE5MTEwMjd9.7y30THJQA_oMKjw4q3a7hkVWhYypycNwWPG6ZN9mbZQ
-
-
-### Get All Notes ↑
-
-GET http://localhost:5000/api/allpublicnotes
-content-Type: application/json
-
-
-### Get All PUBLIC Notes ↑
-
-GET http://localhost:5000/api/notes/6494820d34e782df77ca06c7
-content-Type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzdmYmYwMmJlM2M5YTFhODczOWQ4ZjAiLCJlbWFpbCI6InJhaXlhbjA3QGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg3NzU3NDczLCJleHAiOjE2ODc3NjEwNzN9.oCCAjeKKRyMBvuwYTfiHG7ZyZu_EVPWT33UCqlXW0ZA
-
-
-### Get a Note ↑
-
-PUT http://localhost:5000/api/note/6383bea36aff0f2863fd7a91
-content-Type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzdmYmYwMmJlM2M5YTFhODczOWQ4ZjAiLCJlbWFpbCI6InJhaXlhbjA3QGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg3NzU3NDczLCJleHAiOjE2ODc3NjEwNzN9.oCCAjeKKRyMBvuwYTfiHG7ZyZu_EVPWT33UCqlXW0ZA
-
-{
-    "title": "Again Start : UPDATE",
-    "details": "Let's make a Daily Report Taking Section, <br/>\n  - Make CRUD for Daily Report<br/>\n  - Make a Report for Every Month with Sum of every element. Also, Avg of every element.\n",
-    "image": "",
-    "todo_tags": "6390b6514f1796d6e64e4972"
-}
-
-### Update a Note ↑
-
-DELETE  http://localhost:5000/api/note/6383bea16aff0f2863fd7a8e
-content-Type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzdmYmYwMmJlM2M5YTFhODczOWQ4ZjAiLCJlbWFpbCI6InJhaXlhbjA3QGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg3NzU3NDczLCJleHAiOjE2ODc3NjEwNzN9.oCCAjeKKRyMBvuwYTfiHG7ZyZu_EVPWT33UCqlXW0ZA
-
-### Delete a Note ↑
-
 ################################ AUTH ##########################################
 
 POST http://localhost:5000/api/user/registration
@@ -172,7 +55,7 @@ content-Type: application/json
     "password": "1@qQasdf"
 }
 
-### User Registration Regular ↑
+### User Registration Regular ↑ // note and todo
 
 POST http://localhost:5000/api/user/registration/daily-report
 content-Type: application/json
@@ -185,30 +68,6 @@ content-Type: application/json
 }
 
 ### User Registration Daily Report ↑
-
-POST http://localhost:5000/api/user/registration/crm
-content-Type: application/json
-
-{
-    "fullname": "Shahadat Raiyan",
-    "email": "raiyan13@gmail.com",
-    "naam": "raiyan13",
-    "password": "1@qQasdf"
-}
-
-### User Registration CRM ↑
-
-POST http://localhost:5000/api/user/registration/inventory
-content-Type: application/json
-
-{
-    "fullname": "Shahadat Raiyan",
-    "email": "raiyan14@gmail.com",
-    "naam": "raiyan14",
-    "password": "1@qQasdf"
-}
-
-### User Registration Inventory ↑
 
 POST http://localhost:5000/api/user/registration/admin
 content-Type: application/json
@@ -249,33 +108,3 @@ content-Type: application/json
     "email": "raiyan14@gmail.com",
     "password": "1@qQasdf"
 }
-
-### user 2
-
-POST http://localhost:5000/api/login
-content-Type: application/json
-
-{
-    "email": "raiyan08@gmail.com",
-    "password": "1@qQasdf"
-}
-
-### user 2
-
-POST http://localhost:5000/api/login
-content-Type: application/json
-
-{
-    "email": "shraiyan21@gmail.com",
-    "password": "S.H.Raiyan001"
-}
-### User Login ↑
-
-PUT http://localhost:5000/api/login
-content-Type: application/json
-
-{
-    "email": "shraiyan21@gmail.com",
-    "password": "S.H.Raiyan001"
-}
-### User Login ↑
