@@ -3,7 +3,11 @@ const mongoose = require('mongoose');
 
 //create Schema
 const ExpensePlanSchema = new mongoose.Schema({
-    plan_title: {
+    monthly_sheet_id: {
+        type: String,
+        required: true
+    },
+    plan_id: {
         type: String,
         required: true
     },

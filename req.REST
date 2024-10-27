@@ -1,7 +1,7 @@
 ################################# Todo #############################################
 POST http://localhost:5000/api/item 
 content-Type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzdmYmYwMmJlM2M5YTFhODczOWQ4ZjAiLCJlbWFpbCI6InJhaXlhbjA3QGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg3NzU3NDczLCJleHAiOjE2ODc3NjEwNzN9.oCCAjeKKRyMBvuwYTfiHG7ZyZu_EVPWT33UCqlXW0ZA
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
 
 {
     "item": "Buy Desktop PC"
@@ -11,21 +11,21 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzdmY
 
 GET http://localhost:5000/api/items
 content-Type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzdmYmYwMmJlM2M5YTFhODczOWQ4ZjAiLCJlbWFpbCI6InJhaXlhbjA3QGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg3NzU3NDczLCJleHAiOjE2ODc3NjEwNzN9.oCCAjeKKRyMBvuwYTfiHG7ZyZu_EVPWT33UCqlXW0ZA
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
 
 
 ### Get Items ↑↑
 
 GET http://localhost:5000/api/items/6390b6514f1796d6e64e4972
 content-Type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzdmYmYwMmJlM2M5YTFhODczOWQ4ZjAiLCJlbWFpbCI6InJhaXlhbjA3QGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg3NzU3NDczLCJleHAiOjE2ODc3NjEwNzN9.oCCAjeKKRyMBvuwYTfiHG7ZyZu_EVPWT33UCqlXW0ZA
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
 
 
 ### Get An Item ↑↑
 
 PUT http://localhost:5000/api/item/6390b6514f1796d6e64e4972
 content-Type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzdmYmYwMmJlM2M5YTFhODczOWQ4ZjAiLCJlbWFpbCI6InJhaXlhbjA3QGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg3NzU3NDczLCJleHAiOjE2ODc3NjEwNzN9.oCCAjeKKRyMBvuwYTfiHG7ZyZu_EVPWT33UCqlXW0ZA
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
 
 {
     "item": "Vung Vang", 
@@ -37,7 +37,7 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzdmY
 
 DELETE  http://localhost:5000/api/item/6383bcff44571b24da99fa1b
 content-Type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzdmYmYwMmJlM2M5YTFhODczOWQ4ZjAiLCJlbWFpbCI6InJhaXlhbjA3QGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg3NzU3NDczLCJleHAiOjE2ODc3NjEwNzN9.oCCAjeKKRyMBvuwYTfiHG7ZyZu_EVPWT33UCqlXW0ZA
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
 
 
 ### Delete an Item ↑↑
@@ -46,24 +46,149 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzdmY
 
 POST http://localhost:5000/api/MonthlySheet
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFhMzg1ZjhmN2EyY2Y4NWM5ZDk1OWQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTc3MTY0MSwiZXhwIjoxNzI5ODU4MDQxfQ.KTywLxQTav5DC75FXc5G9op-x7DbR19bITvoqjCx4_k
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
 
 {
     "month_name": "April",
     "starting_balance": 6500
 }
 
-## Create Monthly Sheet
+### Create Monthly Sheet
 
 GET http://localhost:5000/api/MonthlySheet
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFhMzg1ZjhmN2EyY2Y4NWM5ZDk1OWQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTc3MTY0MSwiZXhwIjoxNzI5ODU4MDQxfQ.KTywLxQTav5DC75FXc5G9op-x7DbR19bITvoqjCx4_k
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+### Get all monthly sheet
 
 
-
-GET http://localhost:5000/api/MonthlySheet
+GET http://localhost:5000/api/MonthlySheet/671a39d3de23dc5867d6edd5
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFhMzg1ZjhmN2EyY2Y4NWM5ZDk1OWQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTc3MTY0MSwiZXhwIjoxNzI5ODU4MDQxfQ.KTywLxQTav5DC75FXc5G9op-x7DbR19bITvoqjCx4_k
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+### Get a monthly sheet
+
+PUT http://localhost:5000/api/MonthlySheet/671a39d3de23dc5867d6edd5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+{
+    "month_name": "February, 2024",
+    "starting_balance": 6500
+}
+
+### Update a monthly sheet
+
+
+DELETE http://localhost:5000/api/MonthlySheet/671a39d3de23dc5867d6edd5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+### Soft Delete a monthly sheet
+
+DELETE http://localhost:5000/api/MonthlySheetDelete/671a392d8f7a2cf85c9d95a0
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+### Hard Delete a monthly sheet
+
+################################ Plan ##########################################
+
+POST http://localhost:5000/api/Plan
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+{
+    "plan_name": "Category 1"
+}
+
+### Create Plan
+
+GET http://localhost:5000/api/Plan
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+### Get all Plan
+
+
+GET http://localhost:5000/api/Plan/671cfc49ea7ce40ff8a585e9
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+### Get a Plan
+
+PUT http://localhost:5000/api/Plan/671cfc49ea7ce40ff8a585e9
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+{
+    "plan_name": "Caegory 01"
+}
+
+### Update a Plan
+
+
+DELETE http://localhost:5000/api/Plan/671cf596ea7ce40ff8a585e2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+### Soft Delete a Plan
+
+DELETE http://localhost:5000/api/PlanDelete/671cfc49ea7ce40ff8a585e9
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+### Hard Delete a Plan
+
+################################ IncomePlan ##########################################
+
+POST http://localhost:5000/api/IncomePlan
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+{
+            "monthly_sheet_id":"671d697c80adaba396c82f03",
+            "plan_id":"671d698780adaba396c82f06",
+            "plan_amount":2000
+}
+
+### Create IncomePlan
+
+GET http://localhost:5000/api/IncomePlan
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+### Get all IncomePlan
+
+
+GET http://localhost:5000/api/IncomePlan/671d6dd95d766263a6daae53
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+### Get a IncomePlan
+
+PUT http://localhost:5000/api/IncomePlan/671cfc49ea7ce40ff8a585e9
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+{
+    "plan_name": "Caegory 01"
+}
+
+### Update a IncomePlan
+
+
+DELETE http://localhost:5000/api/IncomePlan/671cf596ea7ce40ff8a585e2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+### Soft Delete a IncomePlan
+
+DELETE http://localhost:5000/api/IncomePlanDelete/671cfc49ea7ce40ff8a585e9
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+### Hard Delete a IncomePlan
 
 ################################ AUTH ##########################################
 
@@ -105,24 +230,24 @@ content-Type: application/json
 
 DELETE http://localhost:5000/api/user/637e68d770ce03fc24e52cd8
 content-Type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzhhZGI2N2Y4MmQxMDkzODk1NzE1MDQiLCJlbWFpbCI6InNocmFpeWFuMjFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiYWNsIjpbInRvZG8iLCJub3RlcyIsImRhaWx5LXJlcG9ydCIsImNybSIsImludmVudG9yeSJdLCJpYXQiOjE3MDg4OTE1NzUsImV4cCI6MTcwODk3Nzk3NX0.pXl8A7BBLYzntfC3udMoMW25QeQqCob4DwcbHYFwi5I
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
 
 ### User Delete // Only by admin ↑
 
 GET http://localhost:5000/api/user/6388563fe7c0712c7ac14326
 content-Type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzhhZGI2N2Y4MmQxMDkzODk1NzE1MDQiLCJlbWFpbCI6InNocmFpeWFuMjFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiYWNsIjpbInRvZG8iLCJub3RlcyIsImRhaWx5LXJlcG9ydCIsImNybSIsImludmVudG9yeSJdLCJpYXQiOjE3MDg4OTE1NzUsImV4cCI6MTcwODk3Nzk3NX0.pXl8A7BBLYzntfC3udMoMW25QeQqCob4DwcbHYFwi5I
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
 
 
 ### Get Single User // Only by admin ↑
 
 GET http://localhost:5000/api/users
 content-Type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzhhZGI2N2Y4MmQxMDkzODk1NzE1MDQiLCJlbWFpbCI6InNocmFpeWFuMjFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiYWNsIjpbInRvZG8iLCJub3RlcyIsImRhaWx5LXJlcG9ydCIsImNybSIsImludmVudG9yeSJdLCJpYXQiOjE3MDg4OTE1NzUsImV4cCI6MTcwODk3Nzk3NX0.pXl8A7BBLYzntfC3udMoMW25QeQqCob4DwcbHYFwi5I
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
 
 ### Get All User // Only by admin ↑
 
-### user 1
+### user 1 LOGIN
 POST http://localhost:5000/api/login
 content-Type: application/json
 

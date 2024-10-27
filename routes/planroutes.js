@@ -1,12 +1,13 @@
 const router = require("express").Router();
 //import todo model
-const MonthlySheetModel = require("../models/MonthlySheetmodel");
+const PlanModel = require("../models/planmodel");
 const TokenChecker = require("../TokenChecker");
 
 const ts = Date.now();
 
 //create first route --add Monthly Sheet to database
-router.post("/api/MonthlySheet", async (req, res) => {
+router.post("/api/Plan", async (req, res) => {
+  console.log(req.body)
   try {
     const theToken = req.headers.authorization;
     if (!!theToken) {
@@ -14,23 +15,22 @@ router.post("/api/MonthlySheet", async (req, res) => {
       console.log("Return Token ", tokenResult);
 
       if (tokenResult) {
-        const newMonthlySheet = new MonthlySheetModel({
-          month_name: req.body.month_name,
-          starting_balance: req.body.starting_balance,
+        const newPlan = new PlanModel({
+          plan_name: req.body.plan_name,
           isActive: true,
           date: ts,
           userId: tokenResult.userId,
         });
-        //save this MonthlySheet in database
-        const saveMonthlySheet = await newMonthlySheet.save();
+        //save this Plan in database
+        const savePlan = await newPlan.save();
         console.log("Done 1");
-        const allMonthlySheet = await MonthlySheetModel.find({
+        const allPlan = await PlanModel.find({
           userId: tokenResult.userId,
         });
         console.log("Done 2");
 
-        res.status(200).json({ saveMonthlySheet, allMonthlySheet });
-        // res.status(200).json(saveMonthlySheet);
+        res.status(200).json({ savePlan, allPlan });
+        // res.status(200).json(savePlan);
       } else {
         res.status(401).json({ ErrorMsg: "Unauthorized User" });
       }
@@ -42,8 +42,8 @@ router.post("/api/MonthlySheet", async (req, res) => {
   }
 });
 
-// // get All MonthlySheet from database
-router.get("/api/MonthlySheet", async (req, res) => {
+// // get All Plan from database
+router.get("/api/Plan", async (req, res) => {
   try {
     const theToken = req.headers.authorization;
     if (!!theToken) {
@@ -51,10 +51,10 @@ router.get("/api/MonthlySheet", async (req, res) => {
       console.log("Return Token ", tokenResult);
 
       if (tokenResult) {
-        const allMonthlySheet = await MonthlySheetModel.find({
+        const allPlan = await PlanModel.find({
           userId: tokenResult.userId,
         });
-        res.status(200).json(allMonthlySheet);
+        res.status(200).json(allPlan);
       } else {
         res.status(401).json({ ErrorMsg: "Unauthorized User" });
       }
@@ -67,7 +67,7 @@ router.get("/api/MonthlySheet", async (req, res) => {
 });
 
 //Get by id route
-router.get("/api/MonthlySheet/:id", async (req, res) => {
+router.get("/api/Plan/:id", async (req, res) => {
   try {
     const theToken = req.headers.authorization;
     if (!!theToken) {
@@ -75,11 +75,11 @@ router.get("/api/MonthlySheet/:id", async (req, res) => {
       console.log("Return Token ", tokenResult);
 
       if (tokenResult) {
-        const AMonthlySheet = await MonthlySheetModel.findById(
+        const APlan = await PlanModel.findById(
           req.params.id,
           {}
         );
-        res.status(200).json(AMonthlySheet);
+        res.status(200).json(APlan);
       } else {
         res.status(401).json({ ErrorMsg: "Unauthorized User" });
       }
@@ -91,8 +91,8 @@ router.get("/api/MonthlySheet/:id", async (req, res) => {
   }
 });
 
-//update MonthlySheet
-router.put("/api/MonthlySheet/:id", async (req, res) => {
+//update Plan
+router.put("/api/Plan/:id", async (req, res) => {
   try {
     const theToken = req.headers.authorization;
     if (!!theToken) {
@@ -101,16 +101,16 @@ router.put("/api/MonthlySheet/:id", async (req, res) => {
 
       if (tokenResult) {
         console.log("Monthly Sheet update ID: ", req.params.id);
-        //find the MonthlySheet by its id and update it
-        const updateMonthlySheet = await MonthlySheetModel.findByIdAndUpdate(
+        //find the Plan by its id and update it
+        const updatePlan = await PlanModel.findByIdAndUpdate(
           req.params.id,
           { $set: req.body }
         );
-        // res.status(200).json(updateMonthlySheet);
-        const allMonthlySheet = await MonthlySheetModel.find({
+        // res.status(200).json(updatePlan);
+        const allPlan = await PlanModel.find({
           userId: tokenResult.userId,
         });
-        res.status(200).json({ updateMonthlySheet, allMonthlySheet });
+        res.status(200).json({ updatePlan, allPlan });
         
       } else {
         res.status(401).json({ ErrorMsg: "Unauthorized User" });
@@ -123,8 +123,8 @@ router.put("/api/MonthlySheet/:id", async (req, res) => {
   }
 });
 
-//Soft Delete MonthlySheet 
-router.delete("/api/MonthlySheet/:id", async (req, res) => {
+//Soft Delete Plan 
+router.delete("/api/Plan/:id", async (req, res) => {
   try {
     const theToken = req.headers.authorization;
     if (!!theToken) {
@@ -132,11 +132,11 @@ router.delete("/api/MonthlySheet/:id", async (req, res) => {
       console.log("Return Token ", tokenResult);
 
       if (tokenResult) {
-        //find the MonthlySheet by its id and delete it
-        // const deleteMonthlySheet = await MonthlySheetModel.findByIdAndDelete(
+        //find the Plan by its id and delete it
+        // const deletePlan = await PlanModel.findByIdAndDelete(
         //   req.params.id
         // );
-        const updateDailyReport = await MonthlySheetModel.findByIdAndUpdate(
+        const updateDailyReport = await PlanModel.findByIdAndUpdate(
             req.params.id,
             {
               isActive: false,
@@ -154,8 +154,8 @@ router.delete("/api/MonthlySheet/:id", async (req, res) => {
   }
 });
 
-//Delete MonthlySheet from database
-router.delete("/api/MonthlySheetDelete/:id", async (req, res) => {
+//Delete Plan from database
+router.delete("/api/PlanDelete/:id", async (req, res) => {
     try {
       const theToken = req.headers.authorization;
       if (!!theToken) {
@@ -163,8 +163,8 @@ router.delete("/api/MonthlySheetDelete/:id", async (req, res) => {
         console.log("Return Token ", tokenResult);
   
         if (tokenResult) {
-          //find the MonthlySheet by its id and delete it
-          const deleteMonthlySheet = await MonthlySheetModel.findByIdAndDelete(
+          //find the Plan by its id and delete it
+          const deletePlan = await PlanModel.findByIdAndDelete(
             req.params.id
           );
           

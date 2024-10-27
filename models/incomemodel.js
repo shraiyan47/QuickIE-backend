@@ -3,6 +3,10 @@ const mongoose = require('mongoose');
 
 //create Schema
 const IncomeSchema = new mongoose.Schema({
+    monthly_sheet_id: {
+        type: String,
+        required: true
+    },
     date: {
         type: Date,
         required: true
@@ -15,7 +19,7 @@ const IncomeSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    category_id: {
+    plan_id: {
         type: Number,
         required: true
     },
