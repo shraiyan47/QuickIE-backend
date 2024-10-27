@@ -1,158 +1,191 @@
-const router = require('express').Router();
-//import todo model 
-const todoItemsModel = require('../models/todomodel');
-const TokenChecker = require('../TokenChecker');
+const router = require("express").Router();
+//import todo model
+const IncomeModel = require("../models/incomemodel");
+const TokenChecker = require("../TokenChecker");
 
 const ts = Date.now();
 
-//create first route --add Todo Item to database
-router.post('/api/item', async (req, res) => {
-    try {
-        const theToken = req.headers.authorization;
-        if (!!theToken) {
-            const tokenResult = TokenChecker.TokenChecker(theToken);
-            console.log("Return Token ", tokenResult);
+//create first route --add Income Plan to database
+router.post("/api/Income", async (req, res) => {
+  console.log(req.body);
+  try {
+    const theToken = req.headers.authorization;
+    if (!!theToken) {
+      const tokenResult = TokenChecker.TokenChecker(theToken);
+      console.log("Return Token ", tokenResult);
 
-            if (tokenResult) {
+      if (tokenResult) {
+        const newIncome = new IncomeModel({
+          monthly_sheet_id: req.body.monthly_sheet_id,
+          plan_id: req.body.plan_id,
+          amount: req.body.amount,
+          description: req.body.description,
+          income_date: req.body.income_date,
+          isActive: true,
+          date: ts,
+          userId: tokenResult.userId,
+        });
+        //save this Plan in database
+        const saveIncome = await newIncome.save();
+        console.log("Done 1");
+        const allIncome = await IncomeModel.find({
+          userId: tokenResult.userId,
+        });
+        console.log("Done 2");
 
-                const newItem = new todoItemsModel({
-                    item: req.body.item,
-                    date: ts,
-                    complete: false,
-                    userId: tokenResult.userId
-                })
-                //save this item in database
-                const saveItem = await newItem.save()
-
-                const allTodoItems = await todoItemsModel.find({"userId":tokenResult.userId});
-                res.status(200).json({ saveItem, allTodoItems });
-                // res.status(200).json(saveItem);
-            }
-            else {
-                res.status(401).json({ "ErrorMsg": "Unauthorized User" })
-            }
-        }
-        else {
-            res.status(406).json({ "ErrorMsg": "Undifined Auth Token" })
-        }
-
-
-    } catch (err) {
-        res.json(err);
+        res.status(200).json({ saveIncome, allIncome });
+        // res.status(200).json(savePlan);
+      } else {
+        res.status(401).json({ ErrorMsg: "Unauthorized User" });
+      }
+    } else {
+      res.status(406).json({ ErrorMsg: "Undifined Auth Token" });
     }
-})
+  } catch (err) {
+    res.json(err);
+  }
+});
 
-// get All Item from database
-router.get('/api/items', async (req, res) => {
-    try {
-        const theToken = req.headers.authorization;
-        if (!!theToken) {
-            const tokenResult = TokenChecker.TokenChecker(theToken);
-            console.log("Return Token ", tokenResult);
+// // get All Income from database
+router.get("/api/Income", async (req, res) => {
+  try {
+    const theToken = req.headers.authorization;
+    if (!!theToken) {
+      const tokenResult = TokenChecker.TokenChecker(theToken);
+      console.log("Return Token ", tokenResult);
 
-            if (tokenResult) {
+      if (tokenResult) {
+        const allIncome = await IncomeModel.find({
+          userId: tokenResult.userId,
+        });
+        const activePlans = allIncome.filter(plan => plan.isActive==true);
+        const inactivePlans = allIncome.filter(plan => plan.isActive==false);
 
-                const allTodoItems = await todoItemsModel.find({"userId":tokenResult.userId});
-                res.status(200).json(allTodoItems);
-
-            }
-            else {
-                res.status(401).json({ "ErrorMsg": "Unauthorized User" })
-            }
-        }
-        else {
-            res.status(406).json({ "ErrorMsg": "Undifined Auth Token" })
-        }
-
-    } catch (err) {
-        res.json(err);
+        res.status(200).json({activePlans, inactivePlans});
+      } else {
+        res.status(401).json({ ErrorMsg: "Unauthorized User" });
+      }
+    } else {
+      res.status(406).json({ ErrorMsg: "Undifined Auth Token" });
     }
-})
+  } catch (err) {
+    res.json(err);
+  }
+});
 
-//Get by id route 
-router.get('/api/items/:id', async (req, res) => {
-    try {
-        const theToken = req.headers.authorization;
-        if (!!theToken) {
-            const tokenResult = TokenChecker.TokenChecker(theToken);
-            console.log("Return Token ", tokenResult);
+//Get by id route
+router.get("/api/Income/:id", async (req, res) => {
+  try {
+    const theToken = req.headers.authorization;
+    if (!!theToken) {
+      const tokenResult = TokenChecker.TokenChecker(theToken);
+      console.log("Return Token ", tokenResult);
 
-            if (tokenResult) {
-                const theTodo = await todoItemsModel.findById(req.params.id, {});
-                res.status(200).json(theTodo);
-            }
-            else {
-                res.status(401).json({ "ErrorMsg": "Unauthorized User" })
-            }
-        }
-        else {
-            res.status(406).json({ "ErrorMsg": "Undifined Auth Token" })
-        }
-
-    } catch (err) {
-        res.json(err);
+      if (tokenResult) {
+        const AIncome = await IncomeModel.findById(req.params.id, {});
+        res.status(200).json(AIncome);
+      } else {
+        res.status(401).json({ ErrorMsg: "Unauthorized User" });
+      }
+    } else {
+      res.status(406).json({ ErrorMsg: "Undifined Auth Token" });
     }
-})
+  } catch (err) {
+    res.json(err);
+  }
+});
 
+//update Income
+router.put("/api/Income/:id", async (req, res) => {
+  try {
+    const theToken = req.headers.authorization;
+    if (!!theToken) {
+      const tokenResult = TokenChecker.TokenChecker(theToken);
+      console.log("Return Token ", tokenResult);
 
-
-//update item
-router.put('/api/item/:id', async (req, res) => {
-    try {
-
-        const theToken = req.headers.authorization;
-        if (!!theToken) {
-            const tokenResult = TokenChecker.TokenChecker(theToken);
-            console.log("Return Token ", tokenResult);
-
-            if (tokenResult) {
-
-                //find the item by its id and update it
-                const updateItem = await todoItemsModel.findByIdAndUpdate(req.params.id, { $set: req.body });
-                // res.status(200).json(updateItem);
-                const allTodoItems = await todoItemsModel.find({"userId":tokenResult.userId});
-                res.status(200).json({ updateItem, allTodoItems });
-
-            }
-            else {
-                res.status(401).json({ "ErrorMsg": "Unauthorized User" })
-            }
-        }
-        else {
-            res.status(406).json({ "ErrorMsg": "Undifined Auth Token" })
-        }
-    } catch (err) {
-        res.json(err);
+      if (tokenResult) {
+        console.log("Income Plan update ID: ", req.params.id);
+        //find the Income by its id and update it
+        const updateIncome = await IncomeModel.findByIdAndUpdate(
+          req.params.id,
+          { $set: req.body }
+        );
+        // res.status(200).json(updateIncome);
+        const allIncome = await IncomeModel.find({
+          userId: tokenResult.userId,
+        });
+        res.status(200).json({ updateIncome, allIncome });
+      } else {
+        res.status(401).json({ ErrorMsg: "Unauthorized User" });
+      }
+    } else {
+      res.status(406).json({ ErrorMsg: "Undifined Auth Token" });
     }
-})
+  } catch (err) {
+    res.json(err);
+  }
+});
 
+//Soft Delete Income
+router.delete("/api/Income/:id", async (req, res) => {
+  try {
+    const theToken = req.headers.authorization;
+    if (!!theToken) {
+      const tokenResult = TokenChecker.TokenChecker(theToken);
+      console.log("Return Token ", tokenResult);
 
-//Delete item from database
-router.delete('/api/item/:id', async (req, res) => {
-    try {
-        const theToken = req.headers.authorization;
-        if (!!theToken) {
-            const tokenResult = TokenChecker.TokenChecker(theToken);
-            console.log("Return Token ", tokenResult);
-
-            if (tokenResult) {
-                //find the item by its id and delete it
-                const deleteItem = await todoItemsModel.findByIdAndDelete(req.params.id);
-                res.status(200).json({ 'msg': 'Item Deleted' });
-
-            }
-            else {
-                res.status(401).json({ "ErrorMsg": "Unauthorized User" })
-            }
-        }
-        else {
-            res.status(406).json({ "ErrorMsg": "Undifined Auth Token" })
-        }
-    } catch (err) {
-        res.json(err);
+      if (tokenResult) {
+        //find the Income by its id and delete it
+        // const deleteIncome = await IncomeModel.findByIdAndDelete(
+        //   req.params.id
+        // );
+        const updateDailyReport = await IncomeModel.findByIdAndUpdate(
+          req.params.id,
+          {
+            isActive: false,
+          }
+        );
+        res
+          .status(200)
+          .json({ msg: req.params.id + " - Income Plan Deleted" });
+      } else {
+        res.status(401).json({ ErrorMsg: "Unauthorized User" });
+      }
+    } else {
+      res.status(406).json({ ErrorMsg: "Undifined Auth Token" });
     }
-})
+  } catch (err) {
+    res.json(err);
+  }
+});
 
+//Delete Income from database
+router.delete("/api/IncomeDelete/:id", async (req, res) => {
+  try {
+    const theToken = req.headers.authorization;
+    if (!!theToken) {
+      const tokenResult = TokenChecker.TokenChecker(theToken);
+      console.log("Return Token ", tokenResult);
+
+      if (tokenResult) {
+        //find the Income by its id and delete it
+        const deleteIncome = await IncomeModel.findByIdAndDelete(
+          req.params.id
+        );
+
+        res.status(200).json({
+          msg: req.params.id + " - Income Plan Permanently Deleted",
+        });
+      } else {
+        res.status(401).json({ ErrorMsg: "Unauthorized User" });
+      }
+    } else {
+      res.status(406).json({ ErrorMsg: "Undifined Auth Token" });
+    }
+  } catch (err) {
+    res.json(err);
+  }
+});
 
 //export router
 module.exports = router;

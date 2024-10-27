@@ -7,7 +7,11 @@ const IncomeSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    date: {
+    plan_id: {
+        type: Number,
+        required: true
+    },
+    income_date: {
         type: Date,
         required: true
     },
@@ -19,8 +23,8 @@ const IncomeSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    plan_id: {
-        type: Number,
+    date: {
+        type: Date,
         required: true
     },
     isActive: {

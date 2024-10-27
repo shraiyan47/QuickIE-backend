@@ -99,7 +99,7 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
 
 {
-    "plan_name": "Category 1"
+    "plan_name": "Expense Category 3"
 }
 
 ### Create Plan
@@ -148,8 +148,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 
 {
             "monthly_sheet_id":"671d697c80adaba396c82f03",
-            "plan_id":"671d698780adaba396c82f06",
-            "plan_amount":2000
+            "plan_id":"671dd6c2d4d6392da584080b",
+            "plan_amount":2500
 }
 
 ### Create IncomePlan
@@ -161,34 +161,85 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 ### Get all IncomePlan
 
 
-GET http://localhost:5000/api/IncomePlan/671d6dd95d766263a6daae53
+GET http://localhost:5000/api/IncomePlan/671ddf29d4d6392da584081b
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
 
 ### Get a IncomePlan
 
-PUT http://localhost:5000/api/IncomePlan/671cfc49ea7ce40ff8a585e9
+PUT http://localhost:5000/api/IncomePlan/671ddf29d4d6392da584081b
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
 
 {
-    "plan_name": "Caegory 01"
+    "plan_amount": "1800"
 }
 
 ### Update a IncomePlan
 
 
-DELETE http://localhost:5000/api/IncomePlan/671cf596ea7ce40ff8a585e2
+DELETE http://localhost:5000/api/IncomePlan/671ddf29d4d6392da584081b
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
 
 ### Soft Delete a IncomePlan
 
-DELETE http://localhost:5000/api/IncomePlanDelete/671cfc49ea7ce40ff8a585e9
+DELETE http://localhost:5000/api/IncomePlanDelete/671dd7e1d4d6392da5840817
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
 
 ### Hard Delete a IncomePlan
+
+
+################################ ExpensesPlan ##########################################
+
+POST http://localhost:5000/api/ExpensesPlan
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+{
+            "monthly_sheet_id":"671d697c80adaba396c82f03",
+            "plan_id":"671dd6dad4d6392da5840811",
+            "plan_amount":2700
+}
+
+### Create ExpensesPlan
+
+GET http://localhost:5000/api/ExpensesPlan
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+### Get all ExpensesPlan
+
+
+GET http://localhost:5000/api/ExpensesPlan/671e093316b0b393ed5f34e7
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+### Get a ExpensesPlan
+
+PUT http://localhost:5000/api/ExpensesPlan/671e093316b0b393ed5f34e7
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+{
+    "plan_amount": "1800"
+}
+
+### Update a ExpensesPlan
+
+
+DELETE http://localhost:5000/api/ExpensesPlan/671e093316b0b393ed5f34e7
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+### Soft Delete a ExpensesPlan
+
+DELETE http://localhost:5000/api/ExpensesPlanDelete/671e093316b0b393ed5f34e7
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTcyOTk4MDcxMiwiZXhwIjoxNzMwMDY3MTEyfQ.KpUHGoaSi22pvXliOLbWRHaOhZZmtHruShthACyPwW0
+
+### Hard Delete a ExpensesPlan
 
 ################################ AUTH ##########################################
 

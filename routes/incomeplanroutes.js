@@ -5,7 +5,7 @@ const TokenChecker = require("../TokenChecker");
 
 const ts = Date.now();
 
-//create first route --add Monthly Sheet to database
+//create first route --add Income Plan to database
 router.post("/api/IncomePlan", async (req, res) => {
   console.log(req.body);
   try {
@@ -56,7 +56,10 @@ router.get("/api/IncomePlan", async (req, res) => {
         const allIncomePlan = await IncomePlanModel.find({
           userId: tokenResult.userId,
         });
-        res.status(200).json(allIncomePlan);
+        const activePlans = allIncomePlan.filter(plan => plan.isActive==true);
+        const inactivePlans = allIncomePlan.filter(plan => plan.isActive==false);
+
+        res.status(200).json({activePlans, inactivePlans});
       } else {
         res.status(401).json({ ErrorMsg: "Unauthorized User" });
       }
@@ -99,7 +102,7 @@ router.put("/api/IncomePlan/:id", async (req, res) => {
       console.log("Return Token ", tokenResult);
 
       if (tokenResult) {
-        console.log("Monthly Sheet update ID: ", req.params.id);
+        console.log("Income Plan update ID: ", req.params.id);
         //find the IncomePlan by its id and update it
         const updateIncomePlan = await IncomePlanModel.findByIdAndUpdate(
           req.params.id,
@@ -142,7 +145,7 @@ router.delete("/api/IncomePlan/:id", async (req, res) => {
         );
         res
           .status(200)
-          .json({ msg: req.params.id + " - Monthly Sheet Deleted" });
+          .json({ msg: req.params.id + " - Income Plan Deleted" });
       } else {
         res.status(401).json({ ErrorMsg: "Unauthorized User" });
       }
@@ -169,7 +172,7 @@ router.delete("/api/IncomePlanDelete/:id", async (req, res) => {
         );
 
         res.status(200).json({
-          msg: req.params.id + " - Monthly Sheet Permanently Deleted",
+          msg: req.params.id + " - Income Plan Permanently Deleted",
         });
       } else {
         res.status(401).json({ ErrorMsg: "Unauthorized User" });

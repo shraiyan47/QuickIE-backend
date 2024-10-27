@@ -16,6 +16,7 @@ const todoItemRoute = require('./routes/todoroutes');
 const planRoute = require('./routes/planroutes');
 const monthlySheetRoute = require('./routes/monthlysheetroutes');
 const incomePlanRoute = require('./routes/incomeplanroutes');
+const expensePlanRoute = require('./routes/expenseplanroutes');
 const userRoute = require('./routes/userroutes');
 mongoose.set("strictQuery", false);
 
@@ -29,6 +30,7 @@ mongoose.connect(process.env.DB_CONNECT)
 app.use('/', todoItemRoute);
 app.use('/', planRoute);
 app.use('/', incomePlanRoute);
+app.use('/', expensePlanRoute);
 app.use('/', monthlySheetRoute);
 app.use('/', userRoute);
 
