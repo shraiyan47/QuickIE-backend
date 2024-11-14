@@ -17,10 +17,10 @@ router.post("/api/Income", async (req, res) => {
       if (tokenResult) {
         const newIncome = new IncomeModel({
           monthly_sheet_id: req.body.monthly_sheet_id,
-          plan_id: req.body.plan_id,
+          incomePlan_id: req.body.incomePlan_id,
           amount: req.body.amount,
           description: req.body.description,
-          income_date: req.body.income_date,
+          income_date: (req.body.income_date)?req.body.income_date:ts,
           isActive: true,
           date: ts,
           userId: tokenResult.userId,
@@ -58,10 +58,10 @@ router.get("/api/Income", async (req, res) => {
         const allIncome = await IncomeModel.find({
           userId: tokenResult.userId,
         });
-        const activePlans = allIncome.filter(plan => plan.isActive==true);
-        const inactivePlans = allIncome.filter(plan => plan.isActive==false);
+        const IncomeData = allIncome.filter(plan => plan.isActive==true);
+        // const inactivePlans = allIncome.filter(plan => plan.isActive==false);
 
-        res.status(200).json({activePlans, inactivePlans});
+        res.status(200).json({IncomeData});
       } else {
         res.status(401).json({ ErrorMsg: "Unauthorized User" });
       }

@@ -7,8 +7,8 @@ const IncomeSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    plan_id: {
-        type: Number,
+    incomePlan_id: {
+        type: String,
         required: true
     },
     income_date: {
