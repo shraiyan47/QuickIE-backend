@@ -7,7 +7,11 @@ const ExpenseSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    date: {
+    expensePlan_id: {
+        type: String,
+        required: true
+    },
+    expense_date: {
         type: Date,
         required: true
     },
@@ -19,8 +23,8 @@ const ExpenseSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    plan_id: {
-        type: Number,
+    date: {
+        type: Date,
         required: true
     },
     isActive: {
