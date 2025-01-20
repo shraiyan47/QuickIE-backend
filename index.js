@@ -38,7 +38,7 @@ app.use('/', expensePlanRoute);
 app.use('/', monthlySheetRoute);
 app.use('/', userRoute);
 
-module.exports = app; // Export the app
+// module.exports = app; // Export the app
 
 //add port and connect to server
-// app.listen(PORT, () => console.log("Server connected"));
+app.listen(PORT, () => console.log("Server connected"));
