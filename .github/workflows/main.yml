@@ -19,8 +19,14 @@ jobs:
         with:
           node-version: 18
 
+      - name: Create .env file
+        run: |
+          echo "PORT=${{ secrets.PORT }}" >> .env
+          echo "DB_CONNECT=${{ secrets.DB_CONNECT }}" >> .env
+          echo "JWT_SECRET_KEY=${{ secrets.JWT_SECRET_KEY }}" >> .env
+
       - name: Install dependencies
         run: npm install
 
-      - name: Run tests
+      - name: Run development server
         run: npm run dev
