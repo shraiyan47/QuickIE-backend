@@ -374,13 +374,13 @@ content-Type: application/json
 
 ### User Registration Daily Report ↑
 
-POST http://localhost:5000/api/user/registration/admin
+POST http://192.168.0.103:5050/api/user/registration/admin
 content-Type: application/json
 
 {
-    "fullname": "Shahadat Admin",
-    "email": "raiyan15@gmail.com",
-    "naam": "raiyan15",
+    "fullname": "Shahadat 3 Admin",
+    "email": "raiyan135@gmail.com",
+    "naam": "raiyan135",
     "password": "1@qQasdf"
 }
 

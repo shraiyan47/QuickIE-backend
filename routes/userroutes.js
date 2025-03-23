@@ -238,6 +238,10 @@ router.post("/api/user/registration/inventory", async (req, res) => {
 
 // Admin Registration
 router.post("/api/user/registration/admin", async (req, res) => {
+
+  console.log("Admin Registration => ", req.body);
+
+
   const emailX = req.body.email;
   const naamX = req.body.naam;
   const Chabi = req.body.password;
