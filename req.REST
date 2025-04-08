@@ -1,5 +1,5 @@
 ################################# Todo #############################################
-POST http://localhost:5000/api/item 
+POST http://localhost:5050/api/item 
 content-Type: application/json
 authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
@@ -9,21 +9,21 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 
 ### Create Item ↑↑
 
-GET http://localhost:5000/api/items
+GET http://localhost:5050/api/items
 content-Type: application/json
 authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
 
 ### Get Items ↑↑
 
-GET http://localhost:5000/api/items/6390b6514f1796d6e64e4972
+GET http://localhost:5050/api/items/6390b6514f1796d6e64e4972
 content-Type: application/json
 authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
 
 ### Get An Item ↑↑
 
-PUT http://localhost:5000/api/item/6390b6514f1796d6e64e4972
+PUT http://localhost:5050/api/item/6390b6514f1796d6e64e4972
 content-Type: application/json
 authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
@@ -35,7 +35,7 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
  
 ### Update an Item ↑↑
 
-DELETE  http://localhost:5000/api/item/6383bcff44571b24da99fa1b
+DELETE  http://localhost:5050/api/item/6383bcff44571b24da99fa1b
 content-Type: application/json
 authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
@@ -44,7 +44,7 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 
 ################################ Montly Sheets ##########################################
 
-POST http://localhost:5000/api/MonthlySheet
+POST http://localhost:5050/api/MonthlySheet
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
@@ -55,20 +55,20 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 
 ### Create Monthly Sheet
 
-GET http://localhost:5000/api/MonthlySheet
+GET http://localhost:5050/api/MonthlySheet
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
 ### Get all monthly sheet
 
 
-GET http://localhost:5000/api/MonthlySheet/672ff3e2ca9ffa09f6237496
+GET http://localhost:5050/api/MonthlySheet/672ff3e2ca9ffa09f6237496
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
 ### Get a monthly sheet
 
-PUT http://localhost:5000/api/MonthlySheet/672ff3e2ca9ffa09f6237496
+PUT http://localhost:5050/api/MonthlySheet/672ff3e2ca9ffa09f6237496
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
@@ -80,13 +80,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 ### Update a monthly sheet
 
 
-DELETE http://localhost:5000/api/MonthlySheet/671a39d3de23dc5867d6edd5
+DELETE http://localhost:5050/api/MonthlySheet/671a39d3de23dc5867d6edd5
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
 ### Soft Delete a monthly sheet
 
-DELETE http://localhost:5000/api/MonthlySheetDelete/671a392d8f7a2cf85c9d95a0
+DELETE http://localhost:5050/api/MonthlySheetDelete/671a392d8f7a2cf85c9d95a0
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
@@ -94,7 +94,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 
 ################################ Plan ##########################################
 
-POST http://localhost:5000/api/Plan
+POST http://localhost:5050/api/Plan
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
@@ -104,20 +104,20 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 
 ### Create Plan
 
-GET http://localhost:5000/api/Plan
+GET http://localhost:5050/api/Plan
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
 ### Get all Plan
 
 
-GET http://localhost:5000/api/Plan/671cfc49ea7ce40ff8a585e9
+GET http://localhost:5050/api/Plan/671cfc49ea7ce40ff8a585e9
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
 ### Get a Plan
 
-PUT http://localhost:5000/api/Plan/671cfc49ea7ce40ff8a585e9
+PUT http://localhost:5050/api/Plan/671cfc49ea7ce40ff8a585e9
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
@@ -128,13 +128,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 ### Update a Plan
 
 
-DELETE http://localhost:5000/api/Plan/671cf596ea7ce40ff8a585e2
+DELETE http://localhost:5050/api/Plan/671cf596ea7ce40ff8a585e2
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
 ### Soft Delete a Plan
 
-DELETE http://localhost:5000/api/PlanDelete/671cfc49ea7ce40ff8a585e9
+DELETE http://localhost:5050/api/PlanDelete/671cfc49ea7ce40ff8a585e9
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
@@ -142,7 +142,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 
 ################################ IncomePlan ##########################################
 
-POST http://localhost:5000/api/IncomePlan
+POST http://localhost:5050/api/IncomePlan
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
@@ -154,20 +154,20 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 
 ### Create IncomePlan
 
-GET http://localhost:5000/api/IncomePlan
+GET http://localhost:5050/api/IncomePlan
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
 ### Get all IncomePlan
 
 
-GET http://localhost:5000/api/IncomePlan/671ddf29d4d6392da584081b
+GET http://localhost:5050/api/IncomePlan/671ddf29d4d6392da584081b
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
 ### Get a IncomePlan
 
-PUT http://localhost:5000/api/IncomePlan/671ddf29d4d6392da584081b
+PUT http://localhost:5050/api/IncomePlan/671ddf29d4d6392da584081b
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
@@ -178,13 +178,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 ### Update a IncomePlan
 
 
-DELETE http://localhost:5000/api/IncomePlan/671ddf29d4d6392da584081b
+DELETE http://localhost:5050/api/IncomePlan/671ddf29d4d6392da584081b
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
 ### Soft Delete a IncomePlan
 
-DELETE http://localhost:5000/api/IncomePlanDelete/671dd7e1d4d6392da5840817
+DELETE http://localhost:5050/api/IncomePlanDelete/671dd7e1d4d6392da5840817
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
@@ -193,7 +193,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 
 ################################ ExpensesPlan ##########################################
 
-POST http://localhost:5000/api/ExpensesPlan
+POST http://localhost:5050/api/ExpensesPlan
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
@@ -205,20 +205,20 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 
 ### Create ExpensesPlan
 
-GET http://localhost:5000/api/ExpensesPlan
+GET http://localhost:5050/api/ExpensesPlan
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
 ### Get all ExpensesPlan
 
 
-GET http://localhost:5000/api/ExpensesPlan/671e093316b0b393ed5f34e7
+GET http://localhost:5050/api/ExpensesPlan/671e093316b0b393ed5f34e7
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
 ### Get a ExpensesPlan
 
-PUT http://localhost:5000/api/ExpensesPlan/671e093316b0b393ed5f34e7
+PUT http://localhost:5050/api/ExpensesPlan/671e093316b0b393ed5f34e7
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
@@ -229,13 +229,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 ### Update a ExpensesPlan
 
 
-DELETE http://localhost:5000/api/ExpensesPlan/671e093316b0b393ed5f34e7
+DELETE http://localhost:5050/api/ExpensesPlan/671e093316b0b393ed5f34e7
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
 ### Soft Delete a ExpensesPlan
 
-DELETE http://localhost:5000/api/ExpensesPlanDelete/671e093316b0b393ed5f34e7
+DELETE http://localhost:5050/api/ExpensesPlanDelete/671e093316b0b393ed5f34e7
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
@@ -244,7 +244,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 
 ################################ Income ##########################################
 
-POST http://localhost:5000/api/Income
+POST http://localhost:5050/api/Income
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTcxMjIzNiwiZXhwIjoxNzMxNzk4NjM2fQ.t73y1Q50RWAndlDINnDg-MHDRwsRt4Xa_PYbFwTfRm4
 
@@ -257,20 +257,20 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 
 ### Create Income
 
-GET http://localhost:5000/api/Income
+GET http://localhost:5050/api/Income
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTcxMjIzNiwiZXhwIjoxNzMxNzk4NjM2fQ.t73y1Q50RWAndlDINnDg-MHDRwsRt4Xa_PYbFwTfRm4
 
 ### Get all Income
 
 
-GET http://localhost:5000/api/Income/6736417ae55007b7011a9684
+GET http://localhost:5050/api/Income/6736417ae55007b7011a9684
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTcxMjIzNiwiZXhwIjoxNzMxNzk4NjM2fQ.t73y1Q50RWAndlDINnDg-MHDRwsRt4Xa_PYbFwTfRm4
 
 ### Get a Income
 
-PUT http://localhost:5000/api/Income/6736417ae55007b7011a9684
+PUT http://localhost:5050/api/Income/6736417ae55007b7011a9684
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTcxMjIzNiwiZXhwIjoxNzMxNzk4NjM2fQ.t73y1Q50RWAndlDINnDg-MHDRwsRt4Xa_PYbFwTfRm4
 
@@ -282,13 +282,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 ### Update a Income
 
 
-DELETE http://localhost:5000/api/Income/671e093316b0b393ed5f34e7
+DELETE http://localhost:5050/api/Income/671e093316b0b393ed5f34e7
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
 ### Soft Delete a Income
 
-DELETE http://localhost:5000/api/IncomeDelete/671e093316b0b393ed5f34e7
+DELETE http://localhost:5050/api/IncomeDelete/671e093316b0b393ed5f34e7
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
@@ -298,7 +298,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 
 ################################ Expense ##########################################
 
-POST http://localhost:5000/api/Expense
+POST http://localhost:5050/api/Expense
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTcxMjIzNiwiZXhwIjoxNzMxNzk4NjM2fQ.t73y1Q50RWAndlDINnDg-MHDRwsRt4Xa_PYbFwTfRm4
 
@@ -311,20 +311,20 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 
 ### Create Expense
 
-GET http://localhost:5000/api/Expense
+GET http://localhost:5050/api/Expense
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTcxMjIzNiwiZXhwIjoxNzMxNzk4NjM2fQ.t73y1Q50RWAndlDINnDg-MHDRwsRt4Xa_PYbFwTfRm4
 
 ### Get all Expense
 
 
-GET http://localhost:5000/api/Expense/6737defc00f99782ff470931
+GET http://localhost:5050/api/Expense/6737defc00f99782ff470931
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTcxMjIzNiwiZXhwIjoxNzMxNzk4NjM2fQ.t73y1Q50RWAndlDINnDg-MHDRwsRt4Xa_PYbFwTfRm4
 
 ### Get a Expense
 
-PUT http://localhost:5000/api/Expense/6737defc00f99782ff470931
+PUT http://localhost:5050/api/Expense/6737defc00f99782ff470931
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTcxMjIzNiwiZXhwIjoxNzMxNzk4NjM2fQ.t73y1Q50RWAndlDINnDg-MHDRwsRt4Xa_PYbFwTfRm4
 
@@ -336,13 +336,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 ### Update a Expense
 
 
-DELETE http://localhost:5000/api/Expense/671e093316b0b393ed5f34e7
+DELETE http://localhost:5050/api/Expense/671e093316b0b393ed5f34e7
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
 ### Soft Delete a Expense
 
-DELETE http://localhost:5000/api/ExpenseDelete/671e093316b0b393ed5f34e7
+DELETE http://localhost:5050/api/ExpenseDelete/671e093316b0b393ed5f34e7
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
@@ -350,7 +350,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkN
 
 ################################ AUTH ##########################################
 
-POST http://localhost:5000/api/user/registration
+POST http://localhost:5050/api/user/registration
 content-Type: application/json
 
 {
@@ -362,7 +362,7 @@ content-Type: application/json
 
 ### User Registration Regular ↑ // note and todo
 
-POST http://localhost:5000/api/user/registration/daily-report
+POST http://localhost:5050/api/user/registration/daily-report
 content-Type: application/json
 
 {
@@ -386,30 +386,30 @@ content-Type: application/json
 
 ### Admin Registration ADMIN ↑
 
-DELETE http://localhost:5000/api/user/637e68d770ce03fc24e52cd8
+DELETE http://localhost:5050/api/user/637e68d770ce03fc24e52cd8
 content-Type: application/json
 authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
 ### User Delete // Only by admin ↑
 
-GET http://localhost:5000/api/user/6388563fe7c0712c7ac14326
+GET http://localhost:5050/api/user/6388563fe7c0712c7ac14326
 content-Type: application/json
 authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
 
 ### Get Single User // Only by admin ↑
 
-GET http://localhost:5000/api/users
+GET http://localhost:5050/api/users
 content-Type: application/json
 authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
 ### Get All User // Only by admin ↑
 
 ### user 1 LOGIN
-POST http://localhost:5000/api/login
+POST http://localhost:5050/api/login
 content-Type: application/json
 
 {
-    "email": "raiyan15@gmail.com",
+    "email": "raiyan135@gmail.com",
     "password": "1@qQasdf"
 }

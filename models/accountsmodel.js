@@ -2,17 +2,29 @@
 const mongoose = require('mongoose');
 
 //create Schema
-const IncomePlanSchema = new mongoose.Schema({
+const ExpenseSchema = new mongoose.Schema({
     monthly_sheet_id: {
         type: String,
         required: true
     },
-    plan_id: {
+    expensePlan_id: {
         type: String,
         required: true
     },
-    plan_amount: {
-        type: Number,
+    expense_date: {
+        type: Date,
+        required: true
+    },
+    amount: {
+        type: String,
+        required: true
+    },
+    description: {
+        type: String,
+        required: true
+    },
+    account_type: {
+        type: String,
         required: true
     },
     date: {
@@ -27,9 +39,8 @@ const IncomePlanSchema = new mongoose.Schema({
         type: String,
         required: true
     }
-    
-}, { collection: 'incomeplan' })
+}, { collection: 'expense' })
 
 //export this Schema
 
-module.exports = mongoose.model('incomeplans', IncomePlanSchema);
+module.exports = mongoose.model('expenses', ExpenseSchema);

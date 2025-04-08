@@ -11,14 +11,11 @@ app.use(express.json());
 const PORT = process.env.PORT || 5000;
 
 // import routes
-// const DailyReport = require('./routes/dailyreportroutes');
-const todoItemRoute = require('./routes/todoroutes');
+
 const planRoute = require('./routes/planroutes');
-const monthlySheetRoute = require('./routes/monthlysheetroutes');
-const incomePlanRoute = require('./routes/incomeplanroutes');
-const incomeRoute = require('./routes/incomeroutes');
-const expenseRoute = require('./routes/expenseroutes');
-const expensePlanRoute = require('./routes/expenseplanroutes');
+const monthlySheetRoute = require('./routes/monthlysheetroutes'); 
+const accountRoute = require('./routes/accountroutes');
+const planningRoute = require('./routes/planningroutes');
 const userRoute = require('./routes/userroutes');
 mongoose.set("strictQuery", false);
 
@@ -28,13 +25,9 @@ mongoose.connect(process.env.DB_CONNECT)
     .catch(err => console.log(err))
 
 
-// app.use('/', DailyReport);
-app.use('/', todoItemRoute);
-app.use('/', planRoute);
-app.use('/', incomePlanRoute);
-app.use('/', incomeRoute);
-app.use('/', expenseRoute);
-app.use('/', expensePlanRoute);
+app.use('/', planRoute); 
+app.use('/', accountRoute);
+app.use('/', planningRoute);
 app.use('/', monthlySheetRoute);
 app.use('/', userRoute);
 

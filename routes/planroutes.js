@@ -6,7 +6,7 @@ const TokenChecker = require("../TokenChecker");
 const ts = Date.now();
 
 //create first route --add Monthly Sheet to database
-router.post("/api/Plan", async (req, res) => {
+router.post("/api/plan", async (req, res) => {
   console.log(req.body)
   try {
     const theToken = req.headers.authorization;
@@ -43,7 +43,7 @@ router.post("/api/Plan", async (req, res) => {
 });
 
 // // get All Plan from database
-router.get("/api/Plan", async (req, res) => {
+router.get("/api/plan", async (req, res) => {
   try {
     const theToken = req.headers.authorization;
     if (!!theToken) {
@@ -67,7 +67,7 @@ router.get("/api/Plan", async (req, res) => {
 });
 
 //Get by id route
-router.get("/api/Plan/:id", async (req, res) => {
+router.get("/api/plan/:id", async (req, res) => {
   try {
     const theToken = req.headers.authorization;
     if (!!theToken) {
@@ -92,7 +92,7 @@ router.get("/api/Plan/:id", async (req, res) => {
 });
 
 //update Plan
-router.put("/api/Plan/:id", async (req, res) => {
+router.put("/api/plan/:id", async (req, res) => {
   try {
     const theToken = req.headers.authorization;
     if (!!theToken) {
@@ -124,7 +124,7 @@ router.put("/api/Plan/:id", async (req, res) => {
 });
 
 //Soft Delete Plan 
-router.delete("/api/Plan/:id", async (req, res) => {
+router.delete("/api/plan/:id", async (req, res) => {
   try {
     const theToken = req.headers.authorization;
     if (!!theToken) {
@@ -155,7 +155,7 @@ router.delete("/api/Plan/:id", async (req, res) => {
 });
 
 //Delete Plan from database
-router.delete("/api/PlanDelete/:id", async (req, res) => {
+router.delete("/api/planDelete/:id", async (req, res) => {
     try {
       const theToken = req.headers.authorization;
       if (!!theToken) {

@@ -1,12 +1,12 @@
 const router = require("express").Router();
 //import todo model
-const ExpenseModel = require("../models/expensemodel");
+const AccountModel = require("../models/accountsmodel");
 const TokenChecker = require("../TokenChecker");
 
 const ts = Date.now();
 
-//create first route --add Expense Plan to database
-router.post("/api/Expense", async (req, res) => {
+//create first route --add Account Plan to database
+router.post("/api/Account", async (req, res) => {
   console.log(req.body);
   try {
     const theToken = req.headers.authorization;
@@ -15,25 +15,26 @@ router.post("/api/Expense", async (req, res) => {
       console.log("Return Token ", tokenResult);
 
       if (tokenResult) {
-        const newExpense = new ExpenseModel({
+        const newAccount = new AccountModel({
           monthly_sheet_id: req.body.monthly_sheet_id,
           expensePlan_id: req.body.ExpensePlan_id,
           amount: req.body.amount,
           description: req.body.description,
-          expense_date: (req.body.Expense_date)?req.body.Expense_date:ts,
+          Account_date: (req.body.Account_date)?req.body.Account_date:ts,
+          account_type: req.body.account_type,
           isActive: true,
           date: ts,
           userId: tokenResult.userId,
         });
         //save this Plan in database
-        const saveExpense = await newExpense.save();
+        const saveAccount = await newAccount.save();
         console.log("Done 1");
-        const allExpense = await ExpenseModel.find({
+        const allAccount = await AccountModel.find({
           userId: tokenResult.userId,
         });
         console.log("Done 2");
 
-        res.status(200).json({ saveExpense, allExpense });
+        res.status(200).json({ saveAccount, allAccount });
         // res.status(200).json(savePlan);
       } else {
         res.status(401).json({ ErrorMsg: "Unauthorized User" });
@@ -46,8 +47,8 @@ router.post("/api/Expense", async (req, res) => {
   }
 });
 
-// // get All Expense from database
-router.get("/api/Expense", async (req, res) => {
+// // get All Account from database
+router.get("/api/Account", async (req, res) => {
   try {
     const theToken = req.headers.authorization;
     if (!!theToken) {
@@ -55,13 +56,13 @@ router.get("/api/Expense", async (req, res) => {
       console.log("Return Token ", tokenResult);
 
       if (tokenResult) {
-        const allExpense = await ExpenseModel.find({
+        const allAccount = await AccountModel.find({
           userId: tokenResult.userId,
         });
-        const ExpenseData = allExpense.filter(plan => plan.isActive==true);
-        // const inactivePlans = allExpense.filter(plan => plan.isActive==false);
+        const AccountData = allAccount.filter(plan => plan.isActive==true);
+        // const inactivePlans = allAccount.filter(plan => plan.isActive==false);
 
-        res.status(200).json({ExpenseData});
+        res.status(200).json({AccountData});
       } else {
         res.status(401).json({ ErrorMsg: "Unauthorized User" });
       }
@@ -74,7 +75,7 @@ router.get("/api/Expense", async (req, res) => {
 });
 
 //Get by id route
-router.get("/api/Expense/:id", async (req, res) => {
+router.get("/api/Account/:id", async (req, res) => {
   try {
     const theToken = req.headers.authorization;
     if (!!theToken) {
@@ -82,8 +83,8 @@ router.get("/api/Expense/:id", async (req, res) => {
       console.log("Return Token ", tokenResult);
 
       if (tokenResult) {
-        const AExpense = await ExpenseModel.findById(req.params.id, {});
-        res.status(200).json(AExpense);
+        const AAccount = await AccountModel.findById(req.params.id, {});
+        res.status(200).json(AAccount);
       } else {
         res.status(401).json({ ErrorMsg: "Unauthorized User" });
       }
@@ -95,8 +96,8 @@ router.get("/api/Expense/:id", async (req, res) => {
   }
 });
 
-//update Expense
-router.put("/api/Expense/:id", async (req, res) => {
+//update Account
+router.put("/api/Account/:id", async (req, res) => {
   try {
     const theToken = req.headers.authorization;
     if (!!theToken) {
@@ -104,17 +105,17 @@ router.put("/api/Expense/:id", async (req, res) => {
       console.log("Return Token ", tokenResult);
 
       if (tokenResult) {
-        console.log("Expense Plan update ID: ", req.params.id);
-        //find the Expense by its id and update it
-        const updateExpense = await ExpenseModel.findByIdAndUpdate(
+        console.log("Account Plan update ID: ", req.params.id);
+        //find the Account by its id and update it
+        const updateAccount = await AccountModel.findByIdAndUpdate(
           req.params.id,
           { $set: req.body }
         );
-        // res.status(200).json(updateExpense);
-        const allExpense = await ExpenseModel.find({
+        // res.status(200).json(updateAccount);
+        const allAccount = await AccountModel.find({
           userId: tokenResult.userId,
         });
-        res.status(200).json({ updateExpense, allExpense });
+        res.status(200).json({ updateAccount, allAccount });
       } else {
         res.status(401).json({ ErrorMsg: "Unauthorized User" });
       }
@@ -126,8 +127,8 @@ router.put("/api/Expense/:id", async (req, res) => {
   }
 });
 
-//Soft Delete Expense
-router.delete("/api/Expense/:id", async (req, res) => {
+//Soft Delete Account
+router.delete("/api/Account/:id", async (req, res) => {
   try {
     const theToken = req.headers.authorization;
     if (!!theToken) {
@@ -135,11 +136,11 @@ router.delete("/api/Expense/:id", async (req, res) => {
       console.log("Return Token ", tokenResult);
 
       if (tokenResult) {
-        //find the Expense by its id and delete it
-        // const deleteExpense = await ExpenseModel.findByIdAndDelete(
+        //find the Account by its id and delete it
+        // const deleteAccount = await AccountModel.findByIdAndDelete(
         //   req.params.id
         // );
-        const updateDailyReport = await ExpenseModel.findByIdAndUpdate(
+        const updateDailyReport = await AccountModel.findByIdAndUpdate(
           req.params.id,
           {
             isActive: false,
@@ -147,7 +148,7 @@ router.delete("/api/Expense/:id", async (req, res) => {
         );
         res
           .status(200)
-          .json({ msg: req.params.id + " - Expense Plan Deleted" });
+          .json({ msg: req.params.id + " - Account Plan Deleted" });
       } else {
         res.status(401).json({ ErrorMsg: "Unauthorized User" });
       }
@@ -159,8 +160,8 @@ router.delete("/api/Expense/:id", async (req, res) => {
   }
 });
 
-//Delete Expense from database
-router.delete("/api/ExpenseDelete/:id", async (req, res) => {
+//Delete Account from database
+router.delete("/api/AccountDelete/:id", async (req, res) => {
   try {
     const theToken = req.headers.authorization;
     if (!!theToken) {
@@ -168,13 +169,13 @@ router.delete("/api/ExpenseDelete/:id", async (req, res) => {
       console.log("Return Token ", tokenResult);
 
       if (tokenResult) {
-        //find the Expense by its id and delete it
-        const deleteExpense = await ExpenseModel.findByIdAndDelete(
+        //find the Account by its id and delete it
+        const deleteAccount = await AccountModel.findByIdAndDelete(
           req.params.id
         );
 
         res.status(200).json({
-          msg: req.params.id + " - Expense Plan Permanently Deleted",
+          msg: req.params.id + " - Account Plan Permanently Deleted",
         });
       } else {
         res.status(401).json({ ErrorMsg: "Unauthorized User" });
