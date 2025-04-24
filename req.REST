@@ -49,7 +49,7 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
 {
-    "month_name": "April",
+    "month_name": "05-2025",
     "starting_balance": 6500
 }
 
@@ -73,7 +73,7 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFkNjkxMDgwYWRhYmEzOTZjODJlZmQiLCJlbWFpbCI6InJhaXlhbjE1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImFjbCI6WyJ0b2RvIiwibm90ZXMiLCJkYWlseS1yZXBvcnQiLCJjcm0iLCJpbnZlbnRvcnkiLCJxdWlja2llIl0sImlhdCI6MTczMTE4MjA0NCwiZXhwIjoxNzMxMjY4NDQ0fQ.2YKfGhck0sh5eceiQ7zntpRbXqJB_9tGqNow4Uc4Rsw
 
 {
-    "month_name": "September, 2024",
+    "month_name": "02-2025",
     "starting_balance": 5500
 }
 
