@@ -12,6 +12,7 @@ const PORT = process.env.PORT || 5000;
 
 // import routes
 
+const contactusRoute = require('./routes/contactroutes');
 const planRoute = require('./routes/planroutes');
 const monthlySheetRoute = require('./routes/monthlysheetroutes'); 
 const accountRoute = require('./routes/accountroutes');
@@ -25,6 +26,7 @@ mongoose.connect(process.env.DB_CONNECT)
     .catch(err => console.log(err))
 
 
+app.use('/', contactusRoute); 
 app.use('/', planRoute); 
 app.use('/', accountRoute);
 app.use('/', planningRoute);
